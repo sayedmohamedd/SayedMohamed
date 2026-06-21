@@ -3,25 +3,24 @@ import {
   AiOutlineWhatsApp,
   AiFillLinkedin,
   AiOutlineInstagram,
-} from 'react-icons/ai';
-import { FiGithub } from 'react-icons/fi';
-import { FaHackerrank, FaFacebookF } from 'react-icons/fa';
-import { BiLogoGmail } from 'react-icons/bi';
-import { BsFillTelephoneFill } from 'react-icons/bs';
-import { TiContacts } from 'react-icons/ti';
+} from "react-icons/ai";
+import { FiGithub } from "react-icons/fi";
+import { FaHackerrank, FaFacebookF } from "react-icons/fa";
 
 // components
-import Service from './components/Service';
-import Skill from './components//Skill';
-import Project from './components/Project';
-import Navbar from './components/Navbar';
-import Logo from '@/app/components/logo/Logo';
-import List from '@/app/components/List/List';
-import ContactForm from './components/ContactForm/ContactForm';
-import TypeWriterComponent from './components/TypeWriterComponent';
+import About from "./components/About/About";
+import Services from "./components/Services/Services";
+import Skills from "./components/Skills/Skills";
+import Projects from "./components/Projects/Projects";
+import Contact from "./components/ContactForm/Contact";
+
+import Navbar from "./components/Navbar";
+import Logo from "@/app/components/logo/Logo";
+import List from "@/app/components/List/List";
+import TypeWriterComponent from "./components/TypeWriterComponent";
 
 // Data
-import { projects, services, skills, media } from './utlis/data';
+import { media } from "./utlis/data";
 
 export default function Home() {
   return (
@@ -85,194 +84,11 @@ export default function Home() {
         </div>
       </header>
 
-      {/* About */}
-      <section id="about">
-        <div className="container mx-auto px-8 py-5 grid grid-cols-3 gap-28 lg:gap-5 lg:h-[100vh] items-center">
-          <div className="col-span-3 lg:col-span-2 h-[80%] py-5 px-5 text-white">
-            <h2 className="text-4xl font-medium border-l-8 px-3 mb-8 border-primary">
-              About
-            </h2>
-            <p className="text-2xl mb-5">
-              I am a <span className="text-primary">Front End Developer</span>
-            </p>
-            <p className="leading-8">
-              Passionate MERN Stack Developer with hands-on experience in
-              building dynamic, full-stack web applications. Skilled in MongoDB,
-              Express.js, React, and Node.js, with a strong focus on clean code,
-              performance, and user experience. I love turning ideas into real,
-              usable products and always aim to learn and grow with every
-              project.
-            </p>
-            <button className="btn m-5">
-              <a href="./Sayed Mohamed Sayed.pdf">Download CV</a>
-            </button>
-            <div className="flex flex-col gap-3 md:flex-row justify-between items-center">
-              <div className="flex flex-col gap-3 items-center w-[320px] shadow-md p-5 rounded-md bg-dark">
-                <BsFillTelephoneFill className="text-xl text-primary" />
-                <h3>Phone</h3>
-                <p>+20 - 0110 212 8186</p>
-              </div>
-              <div className="flex flex-col gap-3 items-center w-[320px] shadow-md p-5 rounded-md bg-dark">
-                <BiLogoGmail className="text-2xl text-primary" />
-                <h3>Gmail</h3>
-                <p>sayedmo.web.developer@gmail.com</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-span-3 lg:col-span-1">
-            <img src="./about.jpg" alt="" loading="lazy" />
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section id="services" className="lg:h-[100vh] flex items-center py-5">
-        <div className="bg-dark h-[80%] w-4/5 rounded-tr-3xl rounded-br-3xl">
-          <div className="container mx-auto px-14 py-8 text-white h-full">
-            <h1 className="text-4xl font-medium border-l-8 px-3 mb-8 border-primary">
-              Services
-            </h1>
-            <div className="grid grid-cols-2 mt-5 gap-14">
-              {services.map((service) => (
-                <Service service={service} key={service.title} />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills */}
-      <section id="skills">
-        <div className="container mx-auto px-8 py-20 grid grid-cols-2 gap-12 lg:h-[100vh] items-center">
-          {/* Skills Images */}
-          <div className="col-span-2 lg:col-span-1">
-            <h2 className="text-4xl font-medium border-l-8 px-3 mb-8 border-primary text-white">
-              Skills
-            </h2>
-            <div className="flex flex-wrap justify-around gap-10 px-5 py-5">
-              <img
-                src="./skills/html.svg"
-                className="md:w-1/5"
-                alt="HTML"
-                loading="lazy"
-              />
-              <img
-                src="./skills/tailwind.svg"
-                className="md:w-1/5"
-                alt="Tailwind CSS"
-                loading="lazy"
-              />
-              <img
-                src="./skills/js.svg"
-                className="md:w-1/5"
-                alt="JavaScript"
-                loading="lazy"
-              />
-              <img
-                src="./skills/react.svg"
-                className="md:w-1/5"
-                alt="ReactJS"
-                loading="lazy"
-              />
-              <img
-                src="./skills/nodejs.svg"
-                className="md:w-1/5"
-                alt="NodeJS"
-                loading="lazy"
-              />
-              <img
-                src="./skills/mongodb.svg"
-                className="md:w-1/5"
-                alt="MongoDB"
-                loading="lazy"
-              />
-              <img
-                src="./skills/mysql.svg"
-                className="md:w-1/5"
-                alt="mysql"
-                loading="lazy"
-              />
-            </div>
-          </div>
-
-          {/* Skills Progress */}
-          <div className="col-span-2 lg:col-span-1 grid grid-cols-2 gap-x-8 gap-y-3 text-lg text-white">
-            {skills.map((skill) => (
-              <Skill skill={skill} key={skill.name} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Projects */}
-      <section id="projects">
-        <div className="container mx-auto px-5 py-20 lg:min-h-[100vh]">
-          <h2 className="text-4xl font-medium border-l-8 px-3 mb-5 border-primary text-white">
-            Projects
-          </h2>
-          <div className="flex justify-around gap-x-1 gap-y-6 flex-wrap px-5 py-5">
-            {projects.map((project, index) => (
-              <Project project={project} key={index} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact */}
-      <section id="contact">
-        <div className="container flex md:block justify-center items-center mx-auto px-5 py-5 lg:h-[100vh]">
-          <div className="hidden justify-evenly lg:flex">
-            <div className="flex flex-col items-center justify-around px-3 py-3 rounded-lg rounded-tl-3xl rounded-tr-3xl h-[150px] w-[240px] bg-primary text-white">
-              <BiLogoGmail className="text-xl" />
-              <h3 className="font-bold">Gmail</h3>
-              <p className="font-bold text-xs text-center">
-                sayedmo.web.developer
-                <br />
-                @gmail.com
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center justify-around px-3 py-3 rounded-lg rounded-tl-3xl rounded-tr-3xl h-[150px] w-[240px] bg-primary text-white">
-              <BsFillTelephoneFill />
-              <h3 className="font-bold">Phone</h3>
-              <p>+20 - 0110 212 8186</p>
-            </div>
-
-            <div className="flex flex-col items-center justify-around px-3 py-3 rounded-lg rounded-tl-3xl rounded-tr-3xl h-[150px] w-[240px] bg-primary text-white">
-              <TiContacts />
-              <h3 className="font-bold">Contact Us</h3>
-              <div className="flex justify-center items-center gap-1.5 text-lg text-white">
-                <a href={media.linkedin}>
-                  <AiFillLinkedin className="bg-primary" />
-                </a>
-                <a href={media.github}>
-                  <FiGithub className="bg-primary" />
-                </a>
-                <a href={media.hackerrank}>
-                  <FaHackerrank className="bg-primary" />
-                </a>
-                <a href={media.whatsapp}>
-                  <AiOutlineWhatsApp className="bg-primary" />
-                </a>
-                <a href={media.facebook}>
-                  <FaFacebookF className="bg-primary" />
-                </a>
-                <a href={media.instagram}>
-                  <AiOutlineInstagram className="bg-primary" />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact*/}
-          <div className="-mt-7 px-5 py-5 rounded-3xl w-[85%] mx-auto bg-dark">
-            <h2 className="text-4xl mt-7  w-60 mx-auto font-medium border-l-8 px-3 mb-8 border-primary text-white">
-              Contact Me
-            </h2>
-            <ContactForm id="contact" />
-          </div>
-        </div>
-      </section>
+      <About />
+      <Services />
+      <Skills />
+      <Projects />
+      <Contact />
     </>
   );
 }
