@@ -66,6 +66,7 @@ const List = () => {
       <li>
         <a
           href="./Sayed Mohamed Sayed.pdf"
+          download
           className="btn font-medium px-2 py-1 rounded-lg bg-primary"
         >
           Resume

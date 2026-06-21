@@ -1,31 +1,46 @@
-'use client';
+"use client";
 // hooks
-import { useEffect, useState } from 'react';
-import { useRef } from 'react';
+import { useEffect, useState } from "react";
+import { useRef } from "react";
 
 // Icons
-import { AiOutlineUnorderedList } from 'react-icons/ai';
-import { navbar_sections } from '../utlis/data';
+import { AiOutlineUnorderedList } from "react-icons/ai";
+import { navbar_sections } from "../utlis/data";
 
 const Nav = () => {
   const [toggleDropMenu, setToggleDropMenu] = useState(false);
   const navBar = useRef(null);
 
-  const [navTag, setNavTag] = useState('#about');
+  const [navTag, setNavTag] = useState("#about");
+
+  // useEffect(() => {
+  //   window?.addEventListener('scroll', () => {
+  //     if (window !== 'undefined') {
+  //       if (window.scrollY >= 620) {
+  //         navBar.current?.classList?.remove('-translate-y-full');
+  //       } else {
+  //         navBar.current?.classList?.add('-translate-y-full');
+  //       }
+  //     }
+  //   });
+  // }, []);
 
   useEffect(() => {
-    window?.addEventListener('scroll', () => {
-      if (window !== 'undefined') {
-        if (window.scrollY >= 620) {
-          navBar.current?.classList?.remove('-translate-y-full');
-        } else {
-          navBar.current?.classList?.add('-translate-y-full');
-        }
+    const handleScroll = () => {
+      if (window.scrollY >= 200) {
+        navBar.current?.classList.remove("-translate-y-full");
+      } else {
+        navBar.current?.classList.add("-translate-y-full");
       }
-    });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
-  const checkActive = () => {};
 
   return (
     <nav
@@ -43,7 +58,7 @@ const Nav = () => {
         </div>
         <ul className="hidden md:flex gap-6 text-lg">
           {navbar_sections.map((el) => (
-            <li key={el.id} className={navTag === el.id ? 'active' : ''}>
+            <li key={el.id} className={navTag === el.id ? "active" : ""}>
               <a
                 href={el.id}
                 onClick={() => setNavTag(el.id)}
@@ -55,7 +70,7 @@ const Nav = () => {
           ))}
 
           <li>
-            <a href="./Sayed Mohamed - MERN Developer.pdf" className="btn">
+            <a href="./Sayed Mohamed Sayed.pdf" className="btn" download>
               Resume
             </a>
           </li>
@@ -68,8 +83,8 @@ const Nav = () => {
         />
         <ul
           className={`${
-            toggleDropMenu ? 'translate-y-0' : 'opacity-0 -translate-y-full'
-          } flex transition-all duration-300 absolute right-0 -z-10 top-16 w-full flex-col rounded-bl-md rounded-br-md gap-3 text-center p-5 bg-dark`}
+            toggleDropMenu ? "translate-y-0" : "opacity-0 -translate-y-full"
+          } flex items-center transition-all duration-300 absolute right-0 -z-10 top-16 w-full flex-col rounded-bl-md rounded-br-md gap-3 text-center p-5 bg-dark`}
         >
           <li className="text-lg font-bold cursor-pointer hover:text-gray-500 transition-all">
             <a href="#about" onClick={() => setToggleDropMenu(false)}>
@@ -96,7 +111,7 @@ const Nav = () => {
               className="rounded-lg font-medium px-3.5 py-1.5 bg-primary text-white"
               onClick={() => setToggleDropMenu(false)}
             >
-              <a href="./Sayed Mohamed Sayed.pdf">Download CV</a>
+              <a href="./Sayed Mohamed Sayed.pdf" download>Download CV</a>
             </button>
           </li>
         </ul>
