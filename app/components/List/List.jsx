@@ -1,16 +1,19 @@
 'use client';
 import { motion } from 'framer-motion';
 
+
+// Side Menu for Desktop and Mobile Devices
 const List = () => {
   return (
     <ul className="flex flex-col justify-start items-start gap-6 text-lg font-medium">
       <motion.li
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
+        className="flex justify-center items-center font-extrabold"
       >
         <a
           href="#about"
-          className="font-medium duration-75 ease-in hover:text-primary"
+          className="font-medium  duration-75 ease-in hover:text-primary"
         >
           About
         </a>

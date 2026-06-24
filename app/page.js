@@ -35,11 +35,8 @@ export default function Home() {
 
             <List />
 
+            {/* Icons */}
             <div>
-              {/* <h3 className="text-center mb-4 font-medium text-lg">
-                Follow Me
-              </h3> */}
-
               <div className="grid grid-cols-3 justify-center gap-4 text-white">
                 <a href={media.linkedin} target="_blank">
                   <AiFillLinkedin className="text-2xl hover:text-primary hover:scale-110 transition-all duration-300" />

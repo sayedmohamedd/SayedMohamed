@@ -253,7 +253,7 @@ export const media = {
 export const navbar_sections = [
   { id: "#about", name: "About" },
   { id: "#services", name: "Services" },
-  { id: "#skills", name: "Skills" },
   { id: "#projects", name: "Projects" },
+  { id: "#skills", name: "Skills" },
   { id: "#contact", name: "Contact Us" },
 ];

@@ -13,18 +13,6 @@ const Nav = () => {
 
   const [navTag, setNavTag] = useState("#about");
 
-  // useEffect(() => {
-  //   window?.addEventListener('scroll', () => {
-  //     if (window !== 'undefined') {
-  //       if (window.scrollY >= 620) {
-  //         navBar.current?.classList?.remove('-translate-y-full');
-  //       } else {
-  //         navBar.current?.classList?.add('-translate-y-full');
-  //       }
-  //     }
-  //   });
-  // }, []);
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= 200) {
@@ -56,9 +44,11 @@ const Nav = () => {
           </h1>
           <p className="text-lg">web developer</p>
         </div>
-        <ul className="hidden md:flex gap-6 text-lg">
+
+        {/* nav links for desktop */}
+        <ul className="hidden md:flex gap-6 text-lg py-2">
           {navbar_sections.map((el) => (
-            <li key={el.id} className={navTag === el.id ? "active" : ""}>
+            <li key={el.id} className={`${navTag === el.id ? "active flex items-center" : ""} flex items-center`}>
               <a
                 href={el.id}
                 onClick={() => setNavTag(el.id)}
@@ -81,6 +71,7 @@ const Nav = () => {
           className="cursor-pointer text-3xl md:hidden"
           onClick={() => setToggleDropMenu((prev) => !prev)}
         />
+        {/* drop menu for mobile devices */}
         <ul
           className={`${
             toggleDropMenu ? "translate-y-0" : "opacity-0 -translate-y-full"
