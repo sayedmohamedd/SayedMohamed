@@ -255,7 +255,7 @@ export const projects = [
 export const media = {
   linkedin: "https://www.linkedin.com/in/sayed-mohamed-680b491b8/",
   facebook: "https://www.facebook.com/sayed.muhammed.54922/",
-  github: "https://github.com/sayedmuhammed74",
+  github: "https://github.com/sayedmohamedd",
   hackerrank: "https://www.hackerrank.com/profile/sayedmohamed1231",
   whatsapp: "https://wa.link/y3fr66",
   instagram: "https://www.instagram.com/_sayedmuhammed",
