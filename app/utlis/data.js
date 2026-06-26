@@ -114,12 +114,22 @@ export const skills = [
     category: "Backend",
   },
   {
+    name: "Nest.js",
+    icon: "🚀",
+    category: "Backend",
+  },
+  {
     name: "MongoDB",
     icon: "🍃",
     category: "Database",
   },
   {
     name: "MySQL",
+    icon: "🗄",
+    category: "Database",
+  },
+  {
+    name: "PostgreSQL",
     icon: "🗄",
     category: "Database",
   },
@@ -154,17 +164,28 @@ export const projects = [
   {
     name: "Mountain Matrix",
     slug: "mountian-matrix",
-    description: "",
+    description:
+      "Designed and developed a sleek, conversion-focused landing page for Mountain Matrix, a company that provides high-quality leads and appointment setting for roofing, solar, and home improvement businesses. Built with Next.js 15, Tailwind CSS v4, and Framer Motion, delivering excellent performance and a premium user experience.",
     link: "https://mountains-matrix-s.vercel.app/",
     github: "https://github.com/sayedmuhammed74/mountain-matrix",
     image: "./projects/mountain-matrix.png",
     tech: ["Next.js", "Tailwind.css", "Framer Motion"],
   },
   {
+    name: "INT",
+    slug: "int",
+    description:
+      "Startup Programming Company Website with Technologies (Next.js, Tailwind.css, Framer Motion, React Query)",
+    tech: ["Next.js", "Tailwind.css", "Framer Motion", "React Query"],
+    image: "./projects/int.png",
+    link: "https://int-firm.com/",
+    github: "https://github.com/sayedmuhammed74/int",
+  },
+  {
     name: "Mashro3",
     slug: "mashro3",
     description:
-      "Full Stack E-Commerce Website in MERN Stack Technologies Full Stack E-Commerce Website in MERN Stack Technologies",
+      "A complete online store built with React.js and Redux. Features include shopping cart management, product filtering & search, product details, offers section, and a responsive UI using Tailwind CSS.",
     link: "https://mashro3.vercel.app/",
     image: "./projects/e-commerce.png",
     github: "https://github.com/sayedmuhammed74/mashro3",
@@ -179,16 +200,6 @@ export const projects = [
     image: "./projects/social.png",
     link: "https://sayedmuhammed74.github.io/social",
     github: "https://github.com/sayedmuhammed74/social",
-  },
-  {
-    name: "INT",
-    slug: "int",
-    description:
-      "Startup Programming Company Website with Technologies (Next.js, Tailwind.css, Framer Motion, React Query)",
-    tech: ["Next.js", "Tailwind.css", "Framer Motion", "React Query"],
-    image: "./projects/int.png",
-    link: "https://int-firm.com/",
-    github: "https://github.com/sayedmuhammed74/int",
   },
   {
     name: "Quiz App",
@@ -207,8 +218,8 @@ export const projects = [
       "TEDx Banisuef Event Website 2022 with pure technologies (HTML, CSS, JavaScript) ",
     image: "./projects/tedx.png",
     tech: ["HTML", "CSS", "JavaScript"],
-    link: "https://sayedmuhammed74.github.io/TEDx/",
-    github: "https://github.com/sayedmuhammed74/TEDx",
+    link: "https://sayedmohamedd.github.io/TEDx/",
+    github: "https://github.com/sayedmohamedd/TEDx",
   },
   {
     name: "Portfolio",
