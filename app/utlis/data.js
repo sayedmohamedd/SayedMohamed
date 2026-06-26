@@ -158,7 +158,7 @@ export const projects = [
     link: "https://mountains-matrix-s.vercel.app/",
     github: "https://github.com/sayedmuhammed74/mountain-matrix",
     image: "./projects/mountain-matrix.png",
-    tech: ["Next.js", "Tailwind.css", "Framer Motion", "React Query"],
+    tech: ["Next.js", "Tailwind.css", "Framer Motion"],
   },
   {
     name: "Mashro3",
