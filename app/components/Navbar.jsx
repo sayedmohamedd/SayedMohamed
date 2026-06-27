@@ -2,6 +2,7 @@
 // hooks
 import { useEffect, useState } from "react";
 import { useRef } from "react";
+import { track } from "@vercel/analytics";
 
 // Icons
 import { AiOutlineUnorderedList } from "react-icons/ai";
@@ -29,7 +30,6 @@ const Nav = () => {
     };
   }, []);
 
-
   return (
     <nav
       className={`fixed top-0 z-20 -translate-y-full w-full duration-150 ease-in opacity-90 bg-dark`}
@@ -48,7 +48,10 @@ const Nav = () => {
         {/* nav links for desktop */}
         <ul className="hidden md:flex gap-6 text-lg py-2">
           {navbar_sections.map((el) => (
-            <li key={el.id} className={`${navTag === el.id ? "active flex items-center" : ""} flex items-center`}>
+            <li
+              key={el.id}
+              className={`${navTag === el.id ? "active flex items-center" : ""} flex items-center`}
+            >
               <a
                 href={el.id}
                 onClick={() => setNavTag(el.id)}
@@ -60,7 +63,12 @@ const Nav = () => {
           ))}
 
           <li>
-            <a href="./Sayed Mohamed Sayed.pdf" className="btn" download>
+            <a
+              onClick={() => track("Resume Download")}
+              href="./Sayed Mohamed Sayed.pdf"
+              className="btn"
+              download
+            >
               Resume
             </a>
           </li>
@@ -102,7 +110,9 @@ const Nav = () => {
               className="rounded-lg font-medium px-3.5 py-1.5 bg-primary text-white"
               onClick={() => setToggleDropMenu(false)}
             >
-              <a href="./Sayed Mohamed Sayed.pdf" download>Download CV</a>
+              <a href="./Sayed Mohamed Sayed.pdf" download>
+                Download CV
+              </a>
             </button>
           </li>
         </ul>

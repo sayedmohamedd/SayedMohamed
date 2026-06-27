@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-
+import { track } from "@vercel/analytics";
 
 // Side Menu for Desktop and Mobile Devices
 const List = () => {
@@ -68,6 +68,7 @@ const List = () => {
       </motion.li>
       <li>
         <a
+          onClick={() => track("Resume Download")}
           href="./Sayed Mohamed Sayed.pdf"
           download
           className="btn font-medium px-2 py-1 rounded-lg bg-primary"

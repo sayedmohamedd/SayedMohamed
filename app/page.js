@@ -7,6 +7,9 @@ import {
 import { FiGithub } from "react-icons/fi";
 import { FaHackerrank, FaFacebookF } from "react-icons/fa";
 
+// hooks
+import { track } from "@vercel/analytics";
+
 // components
 import About from "./components/About/About";
 import Services from "./components/Services/Services";
@@ -103,6 +106,7 @@ export default function Home() {
                 </a>
 
                 <a
+                  onClick={() => track("Resume Download")}
                   href="./Sayed Mohamed Sayed.pdf"
                   download
                   className="px-6 py-3 rounded-xl border border-white/20 hover:border-primary hover:text-primary transition-all"
