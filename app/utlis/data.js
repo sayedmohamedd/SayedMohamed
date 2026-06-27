@@ -247,7 +247,7 @@ export const projects = [
       "Shopify E-Commerce Website with Shopify Liquid, HTML, CSS, JavaScript, and Shopify API",
     link: "https://sarabegypt.myshopify.com/",
     github: "https://github.com/sayedmuhammed74/sarab",
-    image: "./projects/sarab.png",
+    image: "./projects/sarab.PNG",
     tech: ["Shopify Liquid", "HTML", "CSS", "JavaScript", "Shopify API"],
   },
 ];
