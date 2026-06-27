@@ -53,3 +53,14 @@ SayedMohamed/
 ├── tailwind.config.ts
 ├── next.config.js
 └── tsconfig.json
+
+---
+
+**Let's Work Together**
+
+- **Developer**: Sayed Mohamed
+- **Email**: sayedmo.web.developer@gmail.com
+- **Portfolio**: sayedmohamed.vercel.app
+
+
+Made with ❤️ using React & Redux
